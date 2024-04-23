@@ -1,26 +1,69 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-icon aria-hidden="true" :icon="airplane" slot="start"></ion-icon>
+      <ion-label>Airplane Mode</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" :icon="wifi" slot="start"></ion-icon>
+      <ion-label>Wi-Fi</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" :icon="bluetooth" slot="start"></ion-icon>
+      <ion-label>Bluetooth</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon aria-hidden="true" :icon="call" slot="start"></ion-icon>
+      <ion-label>Cellular</ion-label>
+    </ion-item>
+  </ion-list>
 
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-    </ion-content>
-  </ion-page>
+  <ion-list>
+    <ion-item>
+      <ion-avatar aria-hidden="true" slot="start">
+        <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Huey</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar aria-hidden="true" slot="start">
+        <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Dewey</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar aria-hidden="true" slot="start">
+        <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Louie</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-avatar aria-hidden="true" slot="start">
+        <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>Fooie</ion-label>
+    </ion-item>
+  </ion-list>
 </template>
 
+<script lang="ts">
+  import { IonAvatar, IonItem, IonLabel, IonList, IonIcon } from '@ionic/vue';
+  import { defineComponent } from 'vue';
+  import { airplane, bluetooth, call, wifi } from 'ionicons/icons';
+
+  export default defineComponent({
+    components: {
+      IonAvatar,
+      IonItem,
+      IonLabel,
+      IonList,
+      IonIcon,
+    },
+    setup() {
+      return { airplane, bluetooth, call, wifi };
+    },
+  });
+</script>
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 </script>
